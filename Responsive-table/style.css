@@ -1,0 +1,51 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+article h1{
+	margin: 0 auto;
+	text-align: center;
+	padding: 5%;
+	letter-spacing: 2px;
+}
+
+table
+{
+	border-collapse: collapse;
+}
+
+@media (max-width: 720px) {
+	table { border: none; }
+	table, thead, tbody, th, td, tr { display: block;}
+	thead tr { position: absolute; top: -9999px; left: -9999px; }
+	tr { border: 1px solid #ccc; margin-bottom: 1em;}
+	tr:nth-of-type(odd) { background: #eee; }
+	td {
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding-left: 20%;
+	}
+	td:before {
+		position: absolute;
+		top: 1px;
+		left: 2px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+	}
+	td:nth-of-type(1):before {content: "Nazwa "; }
+	td:nth-of-type(2):before {content: "URL "; }
+	td:nth-of-type(3):before {content: "RWD? "; }
+	td:nth-of-type(4):before {content: "Win "; }
+	td:nth-of-type(5):before {content: "Mac "; }
+}
+
+@media (min-width: 721px) {
+	tr:nth-child(2n+1) { background-color: #80C5F5; }
+	table thead tr:nth-child(n) { background-color: #3d447e; color: #dfdfdf; }
+}
+
+			

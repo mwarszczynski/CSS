@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Document editable</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+	<h1>Document editable</h1>
+	<div id="edytor" contenteditable="true">
+		<p>Some easy fun with text editable...</p>
+	</div>
+	<div class="inputs">
+		<div class="inputs_first_col">
+			<input type="button" id="usun" value="Usuń" onclick="deleteElement()"/>
+			<input type="button" id="bolder" value="Bold" onclick="boldElement()" />
+			<input type="button" id="italic" value="Italic" onclick="italicElement()" />
+			<input type="button" id="fontGrow" value="Font-Asc" onclick="changeHigh()" />
+			<input type="button" id="fontGrow" value="Font-Desc" onclick="changeDownHigh()" />
+		</div><!-- /first  inp col -->
+		
+		<div class="inputs_second_col">
+			
+			<input type="button" id="UppTxt" value="UppTxt & change col" /><br>
+			<input type="text" id="fname" onchange="myFunction()">
+			
+		</div><!-- /sec  inp col -->
+	</div>
+	
+	
+	
+</div><!-- / container -->
+	
+	<script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+// backgr colors
+$background-f: #0A495D;
+$background-s: #052630;
+$background-b: #1BC9FF;
+// fonts color
+$text-f: #0E657F;
+$text-s: #0131CC;
+// fonts name
+$font-f: 'Raleway', sans-serif;
+$font-s: 'Saira Semi Condensed', sans-serif;
+// font size
+$fontSize: 15px;
+
+.page {
+   max-width: 1000px;
+   width: 90vw;
+   margin: 0 auto;
+   font-family: $font-s;
+   background: $background-f;
+  &__title {
+      font-size: 1.3em;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      padding: 15px 20px;
+      // padding: 1rem 1.5rem;
+      background: $background-s;
+      color: $text-f;
+      cursor: pointer;
+      transition: .3s ease;
+    &:hover {
+      background: darken($background-s, 3%);
+      color: lighten($text-f, 10%);
+    }
+  }
+  &__wallpaper {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    // padding: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    & > div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__top {
+    background-color: $background-b;
+    color: $text-s;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    position: fixed;
+    bottom: 10%;
+    left: 70%;
+    font-size: $fontSize * 1.2;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__copy {
+    display: none;
+    padding: 1rem 1.5rem 2rem 1.5rem;
+    color: gray;
+    line-height: 1.6;
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 1px dashed gray;
+    font-size: $fontSize * 1.2;
+    & > aside > img {
+      width: 100%;
+      margin: 0 auto;
+    }
+    & p {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__copy--open {
+    display: block;
+  }
+
+  &__text--secondary {
+    color: red;
+  }
+
+&aside img {
+      margin: 0 auto;
+  }
+}
+// button pulse
+.pulse {
+    -webkit-animation-name: pulsing;
+    -webkit-animation-duration: 2.5s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite
+}
+
+@-webkit-keyframes pulsing {
+0% { opacity: 0.0}
+ 10% { opacity: .15}
+ 20% { opacity: .30 }
+ 30% { opacity: .55 }
+ 40% { opacity: .76 }
+ 50% { opacity: 1.0}
+ 60% { opacity: .84}
+ 70% { opacity: .66}
+ 80% { opacity: .44}
+ 90% { opacity: .23}
+ 100% { opacity: 0.0}
+ }
+// end-button-puls
+body {
+  background: #222;
+}
